@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  user:
+    container_name: user
+    build: ./user
+    ports:
+      - 5000:5000
+    environment:
+      - OTEL_SERVICE_NAME=YOUR SERVICE NAME
+      - OTEL_TRACES_EXPORTER=otlp
+      - OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=YOUR IP ADDRESS OF APM SERVER
+      - OTEL_PYTHON_TRACER_PROVIDER=sdk_tracer_provider
+  
