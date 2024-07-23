@@ -1,0 +1,9 @@
+dev:
+  AWS_REGION: us-west-2
+  ECS_CLUSTER: my-dev-cluster
+  ECS_SERVICE: my-dev-service
+
+prod:
+  AWS_REGION: us-east-2
+  ECS_CLUSTER: my-prod-cluster
+  ECS_SERVICE: my-prod-service
