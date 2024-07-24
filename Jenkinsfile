@@ -9,10 +9,9 @@ pipeline {
     }
     stages {
         stage('checkout') {
-            
-            /*steps {
-                checkout scmGit(branches: [[name: "*/${params.ENVIRONMENT}"]], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Umarali-99/Otel-python-sample.git']])
-            }*/
+            steps {
+                sh 'printenv'
+            }
         }
         
         stage('Read Properties') {
@@ -28,7 +27,7 @@ pipeline {
                     env.ECS_CLUSTER = envProps.ECS_CLUSTER
                     env.ECS_SERVICE = envProps.ECS_SERVICE
                     
-                    sh 'printenv'
+                    
                 }
             }
         }
