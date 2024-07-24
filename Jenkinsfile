@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_DEFAULT_REGION = "us-east-2"
+        GIT_BR = "main"
     }
     parameters {
         choice(name: 'ENVIRONMENT', choices: ['dev', 'prod', 'main'], description: 'Select the environment to deploy application')
