@@ -11,7 +11,7 @@ pipeline {
         stage('checkout') {
             
             steps {
-                checkout scmGit(branches: [[name: '*/${params.ENVIRONMENT}']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Umarali-99/Otel-python-sample.git']])
+                checkout scmGit(branches: [[name: "*/${params.ENVIRONMENT}"]], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Umarali-99/Otel-python-sample.git']])
             }
         }
         
