@@ -10,9 +10,9 @@ pipeline {
     stages {
         stage('checkout') {
             
-            steps {
+            /*steps {
                 checkout scmGit(branches: [[name: "*/${params.ENVIRONMENT}"]], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Umarali-99/Otel-python-sample.git']])
-            }
+            }*/
         }
         
         stage('Read Properties') {
