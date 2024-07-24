@@ -4,14 +4,14 @@ pipeline {
         AWS_DEFAULT_REGION = "us-east-2"
     }
     parameters {
-        choice(name: 'ENVIRONMENT', choices: ['dev', 'prod'], description: 'Select the environment to deploy application')
+        choice(name: 'ENVIRONMENT', choices: ['dev', 'prod', 'main'], description: 'Select the environment to deploy application')
     }
     stages {
         stage('checkout') {
             
-            steps {
+            /*steps {
                 git branch: "${params.ENVIRONMENT}", changelog: false, poll: false, url: 'https://github.com/Umarali-99/Otel-python-sample.git'
-            }
+            }*/
         }
         
         stage('Read Properties') {
